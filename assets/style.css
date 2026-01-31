@@ -1,0 +1,977 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+}
+
+.Main{
+    width: 100%;
+     height: 100vh;
+      background-color: hsl(0, 0%, 0%);
+
+}
+
+.menu{
+  display: flex;
+  justify-content: space-around;
+max-width: 100%;
+}
+
+.listMenu{
+  gap: 2rem;
+  display: flex;
+
+}
+
+.listMenu li a{
+  text-decoration: none;
+  color: hsl(0, 0%, 75%);
+   transition-duration: 200ms;
+}
+
+
+.listMenu li a:hover{
+ color: hsl(0, 100%, 100%);
+}
+
+.listMenu li{
+    list-style: none;
+
+}
+
+
+.hamburger{
+  display: none;
+}
+
+.hamburgerActive{
+  display: none;
+}
+
+.imageHolder{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15%;
+  max-width: 100%;
+}
+
+.imageProfile{
+  width: 12%;
+  border-radius: 50%;
+  
+  transform: translateY(20px);
+  opacity: 0;
+  transition:
+    transform 400ms ease-out,
+    opacity 400ms ease-out;
+  
+}
+
+.imageProfile.show{
+  opacity: 1;
+  transform: translateY(0);
+
+}
+
+.introduceBanner{
+    max-width: 68%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 400ms ease-out,
+      transform 400ms ease-out;
+      margin-top: 5%;
+    text-align: center;
+ 
+}
+
+
+.introduceBanner.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+.introduceBanner.introduceFade{
+  opacity: 0.5;
+}
+
+
+
+.firstStr{
+color: hsl(0, 0%, 75%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  
+
+}
+.secondStr{
+    color: hsl(100, 100%, 100%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  font-size: 50px;
+}
+
+.thirdStr{
+  color: hsl(0, 0%, 75%);
+
+}
+
+
+.explaining{
+    
+    margin-top: 2%;
+    color: hsl(0, 0%, 75%);
+    font-size: 17px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 
+    transform 400ms ease-out,
+    opacity 400ms ease-out;
+   text-align: center;
+
+}
+
+.explaining.show{
+ transform: translateY(0);
+ opacity: 1;
+}
+
+.explaining.introduceFade{
+  opacity: 0.5;
+}
+
+.downArrow i{
+  color: hsl(0, 0%, 75%);
+        transition:  400ms ease;
+        border: 1px solid white;
+        border-radius: 50%;
+margin-top: 2em;
+cursor: pointer;
+font-size: 35px;
+
+}
+
+
+
+.downArrow i:hover{
+  color: hsl(0, 100%, 100%);
+}
+
+.secondExplaining{
+  opacity: 0;
+  max-width: 40%;
+  margin: 5%;
+  font-weight: 500;
+  transform: translateY(20px);
+  transition: transform 400ms ,
+  opacity 400ms;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+}
+
+.secondExplaining.show{
+  transform: translateY(0);
+  opacity: 1;
+ 
+}
+
+.firstExp , .fourthExp , .sixthExp{
+    color: hsl(0, 0%, 75%);
+
+}
+.Parts{
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+}
+
+
+
+.firstBox{
+    position: relative;
+  width: 30%;
+  height: 10em;
+background-color: hsl(240, 14%, 95%);
+border-radius: 10px;
+opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 400ms ease-out 0.4s,
+  transform 400ms ease-out 0.4s;
+  transition-delay: 0.2s;
+box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.secondBox{
+    position: relative;
+  width: 30%;
+  height: 10em;
+background-color: hsl(240, 14%, 95%);
+border-radius: 10px;
+opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 400ms ease-out 0.4s,
+  transform 400ms ease-out 0.4s;
+  transition-delay: 0.2s;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+}
+.thirdBox{
+    position: relative;
+  width: 30%;
+  height: 10em;
+background-color: hsl(240, 14%, 95%);
+border-radius: 10px;
+opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 400ms ease-out 0.4s,
+  transform 400ms ease-out 0.4s;
+  transition-delay: 0.2s;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+}
+
+.firstBox h1{
+  font-weight: 100;
+  margin: 5%;
+}
+
+.secondBox h1{
+   font-weight: 100;
+  margin: 5%;
+}
+
+.thirdBox h1{
+   font-weight: 100;
+  margin: 5%;
+}
+
+.firstBox p{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+  max-width: 70%;
+  font-size: 15px;
+    color: hsl(240, 3%, 44%);
+
+}
+
+.secondBox p{
+    position: absolute;
+top: 40%;
+    left: 5%;
+      max-width: 70%;
+  font-size: 15px;
+    color: hsl(240, 3%, 44%);
+
+}
+
+.thirdBox p{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+  max-width: 70%;
+  font-size: 15px;
+  color: hsl(240, 3%, 44%);
+}
+
+
+.firstBox.animate{
+  opacity: 1;
+  transform: translateY(0);
+ 
+}
+
+.secondBox.animate{
+  opacity: 1;
+  transform: translateY(0);
+  
+}
+
+.thirdBox.animate{
+   opacity: 1;
+  transform: translateY(0);
+   
+}
+
+.thirdPart{
+  background-color: hsl(0, 0%, 0%);
+  height: 30em;
+
+}
+
+.thirdPartfirst{
+    color: hsl(240, 3%, 44%);
+
+}
+
+.thirdPartsecond{
+  color: hsl(0, 100%, 100%);
+}
+
+.thirdPartthird{
+    color: hsl(240, 3%, 44%);
+
+}
+
+.thirdPartfourth{
+    color: hsl(0, 100%, 100%);
+
+}
+
+.thirdExplaining{
+  max-width: 54%;
+text-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+ margin: 5%;
+}
+
+.thirdPartfirst{
+  color: hsl(0, 0%, 75%);
+  opacity: 0;
+  transform: translateY(20px);
+  transition:opacity 400ms ease-out ,
+  transform 400ms ease-out ;
+}
+.thirdPartsecond{
+ opacity: 0;
+  transform: translateY(20px);
+  transition:opacity 400ms ease-out ,
+  transform 400ms ease-out ;
+}
+
+.thirdPartthird{
+  color: hsl(0, 0%, 75%);
+ opacity: 0;
+  transform: translateY(20px);
+  transition:opacity 400ms ease-out ,
+  transform 400ms ease-out ;
+}
+
+.thirdPartfourth{
+ opacity: 0;
+  transform: translateY(20px);
+  transition:opacity 400ms ease-out ,
+  transform 400ms ease-out ;
+}
+
+.thirdPartfirst.jump{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.thirdPartsecond.jump{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.thirdPartthird.jump{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.thirdPartfourth.jump{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+.logoHolder{
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+ .HTML{
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 400ms ease-out,
+  transform 400ms ease-out;
+}
+ .HTML.animation{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+ .CSS{
+width: 225px;
+opacity: 0;
+ transform: translateX(20px);
+  transition: opacity 400ms ease-out,
+  transform 400ms ease-out;
+}
+
+.CSS.animationX{
+  opacity: 1;
+ transform: translateX(0);
+  transition: opacity 400ms ease-out,
+  transform 400ms ease-out;
+}
+
+ .JS{
+  opacity: 0;
+   transform: translateY(20px);
+  transition: opacity 400ms ease-out
+  transform 400ms ease-out;
+}
+
+.JS.animation{
+  opacity: 1;
+ transform: translateY(0);
+  transition: opacity 400ms ease-out,
+  transform 400ms ease-out;
+}
+
+.fourthPart{
+  max-width: 100%;
+  margin: 5%;
+}
+
+.fourthExplanation{
+  max-width: 54%;
+   opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 400ms ,
+  transform 400ms;
+}
+
+.fourthExpFirst{
+    color: hsl(240, 3%, 44%);
+}
+
+.fourthExpThird{
+      color: hsl(240, 3%, 44%);
+
+}
+
+.fourthExpFourth{
+        color: hsl(240, 3%, 44%);
+
+}
+
+
+
+.fourthExplanation.showing{
+  opacity: 1;
+  transform: translateY(0);
+}
+.sixthBox{
+  display: flex;
+  justify-content: space-around;
+  opacity: 0;
+ transform: translateY(20px);
+ transition: transform 400ms ease-out,
+ opacity 400ms ease-out;
+ margin: 5%;
+}
+
+.sixthBox.animation{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.firstMiddle{
+  width: 30%;
+  height: 10em;
+background-color: hsl(240, 14%, 95%);
+border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+margin-top: 5%;
+}
+
+
+
+
+.secondMiddle{
+  width: 30%;
+  height: 10em;
+background-color: hsl(240, 14%, 95%);
+border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+margin-top: 5%;
+}
+
+
+
+.thirdMiddle{
+  width: 30%;
+  height: 10em;
+background-color: hsl(240, 14%, 95%);
+border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+margin-top: 5%;
+}
+
+
+
+
+.firstMiddleStr,.thirdMiddleStr,.fifthMiddleS,.fifthMiddleStr,.seventhMiddleStr,.nineMiddleStr,.elevenMiddleStr{
+    color: hsl(240, 3%, 12%);
+    
+
+}
+
+.secondMiddleStr,.fourthMiddleStr,.sixthMiddleStr,.eightMiddleStr,.tenMiddleStr{
+color: hsl(240, 3%, 44%);
+}
+
+.Project{
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 0%);
+overflow: hidden;
+max-width: 100%;
+}
+
+.firstProject{
+  width: 100%;
+   border-radius: 25px 0 0 25px;
+
+}
+
+.firstSide{
+ margin: 5% ;
+ 
+  max-width: 100%;
+
+}
+
+.secondSide{
+  margin-top: 15%;
+   transform: translateX(120%);
+  opacity: 0;
+  transition: opacity 1000ms ease-out,
+  transform 1000ms ease-out;
+}
+
+.secondSide.animationX{
+  opacity: 1;
+  transform: translateX(12%);
+}
+
+.MiddleIntroduce{
+width: 70%;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 400ms ease-out,
+transform 400ms ease-out ;
+
+}
+
+.MiddleIntroduce.animation{
+opacity: 1;
+transform: translateX(0);
+}
+
+.firstProStr, .thirdProStr,.fifthProStr{
+  color: hsl(0, 0%, 75%);
+}
+
+.secondProStr,.fourthProStr{
+  color: hsl(0, 100%, 100%);
+
+
+}
+
+.fourthExplanation{
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+}
+
+.Brand{
+  display: inline-block;
+  margin-top: 5%;
+  font-size: 40px;
+    color: hsl(0, 100%, 100%);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: opacity 400ms ease-out,
+transform 400ms ease-out ;
+}
+
+.Brand.animation{
+opacity: 1;
+transform: translateY(0);
+}
+
+.Job{
+  margin-top: 5%;
+      color: hsl(0, 100%, 100%);
+     transform: translateY(20px);
+     opacity: 0;
+     transition: opacity 400ms ease-out,
+transform 400ms ease-out ;
+}
+
+.Job.animation{
+opacity: 1;
+transform: translateY(0);
+}
+
+.JobExprience{
+ display: inline-block;
+ margin-top: 5%;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 400ms ease-out,
+  opacity 400ms ease-out;
+  color: hsl(0, 0%, 75%);
+}
+
+.JobExprience.animation{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+.firstBadge,.secondBadge,.thirdBadge{
+  display: inline-block;
+  background: hsl(0, 0%, 100%, 0.1);
+border: 1px solid hsl(0, 0%, 100%, 0.08);
+margin-top: 5%;
+ color: hsl(0, 0%, 75%);
+  padding: 5px;
+  border-radius: 15px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 400ms ease-out,
+  opacity 400ms ease-out;
+}
+
+.firstBadge.animation,.secondBadge.animation,.thirdBadge.animation{
+transform: translateY(0);
+opacity: 1;
+}
+.fourthBadge,.fifthBadge,.sixthBadge{
+  display: inline-block;
+ background: hsl(0, 0%, 100%, 0.1);
+border: 1px solid hsl(0, 0%, 100%, 0.08);
+
+ color: hsl(0, 0%, 75%);
+  padding: 5px;
+  margin-bottom: 5%;
+  border-radius: 15px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 400ms ease-out,
+  opacity 400ms ease-out;
+}
+
+.seventhBadge,.eighthBadge,.ninthBadge,.tenthBadge{
+ display: inline-block;
+ background: hsl(0, 0%, 100%, 0.1);
+border: 1px solid hsl(0, 0%, 100%, 0.08);
+
+ color: hsl(0, 0%, 75%);
+  padding: 5px;
+  margin-bottom: 5%;
+  border-radius: 15px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 400ms ease-out,
+  opacity 400ms ease-out;
+}
+.fourthBadge.animation,.fifthBadge.animation,.sixthBadge.animation,.seventhBadge.animation,.eighthBadge.animation,.ninthBadge.animation,.tenthBadge.animation{
+transform: translateY(0);
+opacity: 1;
+}
+
+.firstStrongProject,.thirdStrongProjects,.fifthStrongProjects{
+  color: hsl(0, 0%, 0%);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+}
+
+.secondStrongProjects , .fourthStrongProjects,.sixthStrongProjects{
+  color: hsl(0, 0%, 75%);
+}
+
+.secondFirstSide {
+  margin: 5%;
+  max-width: 50%;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 400ms ease-out,
+  opacity 400ms ease-out;
+}
+
+.secondFirstSide.animation{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.center .secondProjectsImage{
+  width: 25%;
+}
+
+.secondProjectsImage{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 400ms ease-out,
+  transform 400ms ease-out;
+}
+
+.secondProjectsImage.animation{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.bottom{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.secondBrand{
+    color: hsl(0, 0%, 0%);
+    font-size: 40px;
+
+}
+
+.projectIntroduce{
+  text-align: center;
+  max-width: 50%;
+        color: hsl(240, 3%, 44%);
+font-weight: 700;
+}
+
+.introduce{
+          color: hsl(240, 3%, 44%);
+
+}
+
+@media only screen and (max-width: 767px){
+  .listMenu{
+     gap: 0;
+     display: none;
+     width: 100%;
+}.hamburger{
+    display: block;
+    font-size: 35px;
+    margin-right: 5px;
+    margin-top: 5px;
+    line-height: 1;
+  }.responsive{
+     position: absolute;
+     left: 0;
+      right: 0;
+     top: 60px;
+    width: 100%;
+    height: 300px;
+   background: linear-gradient(
+  to bottom,
+  hsl(270, 20%, 18%),
+  hsl(0, 0%, 8%)
+);
+opacity: 0;
+  transform: translateY(-10px);
+  transition: 
+    opacity 250ms ease,
+    transform 250ms ease;
+    z-index: 200;
+  }.menu{
+    position: relative;
+justify-content: flex-start; 
+ } .active{
+  opacity: 1;
+  transform: translateY(0);
+ }.listActive{
+  display: block;
+  text-align: center;
+ }.listActive li {
+    padding-top: 45px;
+
+ }.listActive li a:hover {
+    color: hsl(280, 40%, 70%);
+
+ }.hamburgerActive{
+  display: none;
+    font-size: 45px;
+    margin-right: 5px;
+    margin-top: 5px;
+ }.imageProfile{
+  width: 30%;
+  top: 10em;
+ }.secondStr{
+  font-size: 20px;
+ }.introduceBanner{
+  text-align: center;
+  max-width: 100%;
+ }.thirdStr{
+  font-size: 23px;
+  margin-left: 0;
+
+ }.firstStr{
+  font-size: 23px;
+ }.explaining{
+    margin-top: 2em;
+}.secondExplaining{
+  font-size: 20px;
+  max-width: 100%;
+ }.Parts{
+  flex-direction: column;
+ }.firstBox,.secondBox,.thirdBox{
+  width: 95% ;
+  margin-left: 1% ;
+  margin-top: 5%;
+ }.firstBox p ,.secondBox p , .thirdBox p{
+  left: 0;
+  top: 25%;
+ }.firstBox h1,.secondBox h1,.thirdBox h1{
+  margin: 0;
+  font-size: 20px;
+ }.thirdExplaining{
+  max-width: 100%;
+    font-size: 20px;
+    text-align: center;
+ 
+ }.logoHolder{
+  flex-direction: column;
+ }
+
+ .logoHolder .HTML, .logoHolder .CSS , .logoHolder .JS{
+  width: 100px;
+  margin: auto;
+ }.fourthExplanation{
+  font-size: 20px;
+  max-width: 100%;
+  text-align: center;
+ }.sixthBox{
+  flex-direction: column;
+ }.firstMiddle ,.secondMiddle , .thirdMiddle,.fourthMiddle,.fifthMiddle,.sixthMiddle{
+  width: 95%;
+ }.firstMiddle h3 ,.secondMiddle h3,.thirdMiddle h3{
+  margin: 5%;
+ }.Project{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }.secondSide{
+   transform: none !important;
+   opacity: 1;
+   border-radius: 0;
+   width: 100%;
+   max-width: 75%;
+   height: 200px;
+   margin: 0;
+   margin-top: 15%;
+ }.firstProject{
+  
+  border-radius: 0;
+ }
+
+ .Project h1{
+  width: 100%;
+  font-size: 20px;
+  margin: 0;
+ }.Brand{
+  display: block;
+  text-align: center;
+  font-size: 25px;
+ }.Job{
+  font-size: 25px;
+  text-align: center;
+ }.JobExprience{
+  display: block;
+  text-align: center;
+  margin-left: 5%;
+ }.Badges{
+  width: 100%;
+   display: flex;
+   
+  flex-wrap: wrap;
+ }.secondFirstSide .secondProjectsIntroduce{
+  font-size: 20px;
+  margin: 0;
+  max-width: 100%;
+ }.center .secondProjectsImage{
+  width: 100%;
+  max-width: 75%;
+ }.secondFirstSide{
+width: 100%;
+transform: translateY(40px);
+ max-width: 100%;
+  margin: 0;
+ }.secondProjectsImage{
+  margin-top: 15%;
+  opacity: 1;
+  transform: none !important;
+ }.projectIntroduce{
+  font-size: 15px;
+ }.projectIntroduce{
+  max-width: 100%;
+ }.secondBrand{
+  font-size: 25px;
+ }
+    
+ 
+}
+@media only screen and (min-width:768px) and (max-width: 1024px){
+.introduceBanner{
+  max-width: 100%;
+}.secondStr{
+  font-size: 35px;
+}.secondExplaining{
+  max-width: 55%;
+}.Parts{
+  flex-direction: column;
+
+}.firstBox , .secondBox , .thirdBox{
+  width: 100%;
+   height: 12em;
+    margin: 0;
+margin-top: 5%;
+}.thirdExplaining{
+  max-width: 100%;
+}.fourthExplanation{
+  max-width: 100%;
+}.firstMiddle , .secondMiddle ,.thirdMiddle{
+  height: 240px;
+}.Project{
+  flex-direction: column;
+}.Brand{
+  display: block;
+  text-align: center;
+}.firstSide h1{
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}.firstProject{
+  width: 50%;
+  border-radius: 0;
+  transform: none !important;
+  opacity: 1;
+  
+}.secondSide{
+  display: flex;
+  justify-content: center;
+}.secondExplaining{
+  max-width: 100%;
+  
+}.Job{
+  display: block;
+  text-align: center;
+}.JobExprience{
+  text-align: center;
+  left: 0;
+}.projectIntroduce{
+  max-width: 100%;
+}.firstBox p , .secondBox p ,.thirdBox p{
+    top: 55%;
+}
+}
+
+
